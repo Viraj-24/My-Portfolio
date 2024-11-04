@@ -1,0 +1,277 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background 0.3s ease-in-out;
+}
+
+header {
+    background-color: #444;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+.nav-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin: 0 0.5rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+.home-btn {
+    background-color: #4CAF50; /* Green */
+}
+
+.home-btn:hover {
+    background-color: #45a049;
+}
+
+.biodata-btn {
+    background-color: #008CBA; /* Blue */
+}
+
+.biodata-btn:hover {
+    background-color: #007bb5;
+}
+
+.resume-btn {
+    background-color: #f44336; /* Red */
+}
+
+.resume-btn:hover {
+    background-color: #da190b;
+}
+
+
+main {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: slideInUp 1.5s ease-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+main:hover {
+    transform: scale(1.02);
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #444;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+main h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ffcc00;
+    margin: 0.5rem auto;
+    border-radius: 2px;
+}
+
+main p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+
+section {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+section li:last-child {
+    border-bottom: none;
+}
+
+button {
+    background-color: #ffcc00;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    background-color: #ffaa00;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+    background-color: #ff9900;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+
+footer {
+    background-color: #333;
+    color: #f4f4f9;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+footer nav a {
+    color: #ffcc00;
+    margin: 0 1rem;
+}
+
+footer nav a:hover {
+    color: #f4f4f9;
+    text-decoration: underline;
+}
+/* Base button styling */
+.button {
+    background-color: #ffcc00;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+/* Active button styling */
+.button.active {
+    background-color: #ffaa00; /* Change color to show it's active */
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* More shadow to emphasize */
+}
+/* Contact information styling */
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.contact-info li {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.contact-info a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+/* Clear background image for the index page */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('background.jpg') center/cover no-repeat; /* Adds the background image */
+    background-attachment: fixed; /* Keeps the image in place on scroll */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Main content styling to make text readable over background */
+main {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: slideInUp 1.5s ease-out;
+    transition: transform 0.3s ease-in-out;
+}
